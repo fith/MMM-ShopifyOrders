@@ -1,0 +1,22 @@
+{
+  "name": "MMM-ShopifyOrders",
+  "version": "1.0.0",
+  "description": "Todo: Insert description here!",
+  "main": "MMM-ShopifyOrders.js",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-eslint": "latest",
+    "grunt-jsonlint": "latest",
+    "grunt-markdownlint": "^1.0.13",
+    "grunt-stylelint": "latest",
+    "grunt-yamllint": "latest",
+    "stylelint-config-standard": "latest",
+    "time-grunt": "latest"
+  },
+  "dependencies": {
+    "@shopify/shopify-api": "^8.0.2",
+    "xhr2": "^0.2.1"
+  }
+}
