@@ -6,7 +6,7 @@ For Shopify store owners!
 
 Display your open order count on your MagicMirror. Set an urgency threshold so the text glows if orders are piling up.
 
-[alt text](https://github.com/fith/MMM-ShopifyOrders/blob/main/docs/urgency.png?raw=true)
+![A count of "25 Orders" glowing brightly, with urgency, over a black background.](https://github.com/fith/MMM-ShopifyOrders/blob/main/docs/urgency.png?raw=true)
 
 Supports internationalization of "Orders" via translation json files.
 
