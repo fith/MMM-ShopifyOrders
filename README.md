@@ -23,21 +23,21 @@ You just need to make a personal dev app, name it whatever you want, add the sco
 To use this module, add the following configuration block to the modules array in the `config/config.js` file:
 ```js
 var config = {
-	modules: [
-		{
-			module: 'MMM-ShopifyOrders',
-			config: {
-				// See below for configurable options
-				updateInterval: 60000,
-				urgentLevel: 10,
-				shopify: {
-					accessToken: 'your secret developer app admin api access token',
-					storeUrl: 'https://your-dev-store.myshopify.com',
-					orderFilter: 'unfulfilled', // any, fulfilled, unfulfilled, etc
-				}
-			}
-		}
-	]
+  modules: [
+    {
+      module: 'MMM-ShopifyOrders',
+      config: {
+        // See below for configurable options
+        updateInterval: 60000,
+        urgentLevel: 10,
+        shopify: {
+          accessToken: 'your secret developer app admin api access token',
+          storeUrl: 'https://your-dev-store.myshopify.com',
+          orderFilter: 'unfulfilled', // any, fulfilled, unfulfilled, etc
+        }
+      }
+    }
+  ]
 }
 ```
 
