@@ -9,24 +9,23 @@
  *
  */
 .MMM-ShopifyOrders h1 {
-    font-size: 8em;
+    font-size: 4em;
     margin:0;
     padding:0;
-    color:white;
+    color:#fff;
 }
 
 .MMM-ShopifyOrders h1.urgent {
-    color: #fff;
-    -webkit-animation: urgentglow 1s ease-in-out infinite alternate;
-    -moz-animation: urgentglow 1s ease-in-out infinite alternate;
-    animation: urgentglow 1s ease-in-out infinite alternate;
+  -webkit-animation: urgentglow 1s ease-in-out infinite alternate;
+  -moz-animation: urgentglow 1s ease-in-out infinite alternate;
+  animation: urgentglow 1s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes urgentglow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fc6d09, 0 0 40px #fc6d09, 0 0 50px #fc6d09, 0 0 60px #fc6d09, 0 0 70px #fc6d09;
   }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fc6d09, 0 0 40px #fc6d09, 0 0 50px #fc6d09, 0 0 60px #fc6d09, 0 0 70px #fc6d09, 0 0 80px #fc6d09;
+  }
+}

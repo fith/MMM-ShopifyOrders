@@ -13,9 +13,9 @@ Module.register("MMM-ShopifyOrders", {
 		updateInterval: 60000,
 		urgentLevel: 10,
 		shopify: {
-			orderFilter: 'unfulfilled', // any, fulfilled, unfulfilled, etc
 			accessToken: 'your secret developer app admin api access token',
-			storeUrl: 'https://your-dev-store.myshopify.com'
+			storeUrl: 'https://your-dev-store.myshopify.com',
+			orderFilter: 'unfulfilled', // any, fulfilled, unfulfilled, etc
 		}
 	},
 
@@ -36,7 +36,7 @@ Module.register("MMM-ShopifyOrders", {
 		wrapper.classList.add("MMM-ShopifyOrders");
 		var h1 = document.createElement("h1");		// If this.dataRequest is not empty
 		if (this.orderCount > 0 ){
-			h1.innerHTML = this.orderCount + " Orders";
+			h1.innerHTML = this.orderCount + " " + this.translate("ORDERS");
 		}
 		if (this.orderCount > this.config.urgentLevel ){
 			h1.classList.add("urgent");
