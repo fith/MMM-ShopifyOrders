@@ -10,8 +10,6 @@ Display your open order count on your MagicMirror. Set an urgency threshold so t
 
 Supports internationalization of "Orders" via translation json files.
 
-Bootstrapped using https://github.com/roramirez/MagicMirror-Module-Template
-
 ## Setting up Shopify
 
 This is a big involved, so here is a detailed tutorial:
@@ -52,3 +50,6 @@ var config = {
 | `shopify:accessToken` | `string`       |                    | Required  | Shopify developer app Admin API Access Token.                        |
 | `shopify:storeUrl` | `url`             |                    | Required  | Your Shopify dev store url. The myshopify.com one.                   |
 | `shopify:orderFilter` | `string`       | 'unfulfilled'      | Optional  | Which order statuses to count: any, unfulfilled, fulfilled           |
+
+
+This module was bootstrapped using https://github.com/roramirez/MagicMirror-Module-Template
