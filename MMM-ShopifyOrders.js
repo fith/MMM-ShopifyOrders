@@ -10,7 +10,7 @@
 
 Module.register("MMM-ShopifyOrders", {
 	defaults: {
-		updateInterval: 60000,
+		updateIntervalInMinutes: 10,
 		urgentLevel: 10,
 		shopify: {
 			accessToken: 'your secret developer app admin api access token',
@@ -23,11 +23,10 @@ Module.register("MMM-ShopifyOrders", {
 
 	start: function() {
 		this.orderCount = '';
-		this.sendSocketNotification('MMM-ShopifyOrders-GET_ORDER_COUNT', this.config);
-
-		setInterval(function() {
-			this.sendSocketNotification('MMM-ShopifyOrders-GET_ORDER_COUNT', this.config);
-		}, this.config.updateInterval);
+		this.sendSocketNotification('CONFIG', this.config);
+		// setInterval(function() {
+		// 	this.sendSocketNotification('MMM-ShopifyOrders-GET_ORDER_COUNT', this.config);
+		// }, this.config.updateIntervalInMinutes * 1000);
 	},
 
 	getDom: function() {
