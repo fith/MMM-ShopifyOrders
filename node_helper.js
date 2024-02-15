@@ -19,24 +19,25 @@ module.exports = NodeHelper.create({
 	 */
 	socketNotificationReceived: function(notification, payload) {
 		var self = this;
-		if (notification === Notifications.CONFIG && !this.client) {
+		if (notification === 'CONFIG' && !this.client) {
 			this.config = payload;
 			this.process()
 		}
 	},
 
 	process() {
-		var urlApi = payload.shopify.storeUrl + '/admin/api/2023-10/orders/count.json?status=' + payload.shopify.orderFilter
+		var urlApi = this.config.shopify.storeUrl + '/admin/api/2023-10/orders/count.json?status=' + this.config.shopify.orderFilter
 		var dataRequest = new XMLHttpRequest();
 		dataRequest.open("GET", urlApi, true);
-		dataRequest.setRequestHeader('X-Shopify-Access-Token', payload.shopify.accessToken);
+		dataRequest.setRequestHeader('X-Shopify-Access-Token', this.config.shopify.accessToken);
+		self = this;
 		dataRequest.onreadystatechange = function() {
 			if (this.readyState === 4) {
 				if (this.status === 200) {
 					self.sendSocketNotification("MMM-ShopifyOrders-ORDERS_UPDATE", this.response);
 				}
 			}
-			this.scheduleNextFetch(this.config.updateIntervalInMinute * ONE_MINUTE_MS);
+			self.scheduleNextFetch(self.config.updateIntervalInMinutes * ONE_MINUTE_MS);
 		};
 		dataRequest.send();
 	},

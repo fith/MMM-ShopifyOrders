@@ -24,9 +24,6 @@ Module.register("MMM-ShopifyOrders", {
 	start: function() {
 		this.orderCount = '';
 		this.sendSocketNotification('CONFIG', this.config);
-		// setInterval(function() {
-		// 	this.sendSocketNotification('MMM-ShopifyOrders-GET_ORDER_COUNT', this.config);
-		// }, this.config.updateIntervalInMinutes * 1000);
 	},
 
 	getDom: function() {
